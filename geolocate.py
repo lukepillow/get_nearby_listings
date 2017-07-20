@@ -32,7 +32,7 @@ def getPossibleLocations(address):
 			print(api_response['status'])
 	
 	for location in api_response['results']:
-		if not 'street_address' in getTypeFromJSON(location) and not 'premise' in getTypeFromJSON(location):
+		if not 'street_address' in getTypeFromJSON(location) and not 'premise' in getTypeFromJSON(location) and not 'establishment' in getTypeFromJSON(location):
 			print('Possible location is NOT a street address:')
 			print(getAddressFromJSON(location))
 			print('It has the following types:')
