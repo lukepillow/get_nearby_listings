@@ -51,7 +51,7 @@ for page in pagesToCrawl:
 
 labels = ['Name', 'Place', 'Address', 'Lat', 'Lng']
 results1 = pd.DataFrame.from_records(results, columns=labels)
-results1.to_csv('output4.csv')
+results1.to_csv('waypointresidential.csv')
 
 
 

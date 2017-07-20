@@ -23,7 +23,7 @@ for div in soup.find_all(class_='popup'):
 
 labels = ['Name','Website','Full Address', 'Lat', 'Lng']
 results = pd.DataFrame.from_records(results, columns=labels)
-results.to_csv('output2.csv')
+results.to_csv('abacuscapitalgroup.csv')
 
 
 

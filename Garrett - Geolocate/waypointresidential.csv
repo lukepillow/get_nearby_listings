@@ -1,0 +1,66 @@
+,Name,Place,Address,Lat,Lng
+0,Rebel Place,"Las Vegas, Nevada","3896 Swenson St, Las Vegas, NV 89119, USA",36.118865,-115.144955
+1,Chatham Village,"Webster, Texas","16460 TX-3, Webster, TX 77598, USA",29.551504,-95.1336029
+2,Valencia Place,"Houston, Texas","3131 W Bellfort Ave, Houston, TX 77054, USA",29.6708877,-95.42960629999999
+3,Parkside,"Houston, Texas","777 S Mayde Creek Dr, Houston, TX 77079, USA",29.777724,-95.624448
+4,"Brook Place, Phase II","Huntsville, Texas",error,error,error
+5,Brook Place,"Huntsville, Texas","5020 Sam Houston Ave, Huntsville, TX 77340, USA",30.6980388,-95.5348939
+6,Midtown Corpus Christi,"Corpus Christi, Texas","6501 McArdle Rd, Corpus Christi, TX 78412, USA",27.7015962,-97.35181689999999
+7,High View Place,"San Antonio, Texas","15949 Chase Hill Blvd, San Antonio, TX 78256, USA",29.5955703,-98.6290181
+8,Maverick Place,"Arlington, Texas","930 Benge Dr, Arlington, TX 76013, USA",32.7237895,-97.1193637
+9,Altis Lakeline,"Austin, Texas","12700 Ridgeline Blvd, Cedar Park, TX 78613, USA",30.467022,-97.8108632
+10,The Pointe at La Escala,"San Antonio, Texas","10707 IH 10 West, San Antonio, TX 78230, United States",29.541363,-98.571764
+11,Falcon Pointe,"Pflugerville, Texas","19015 Falcon Pointe Blvd, Pflugerville, TX 78660, USA",30.4652285,-97.5829389
+12,The Residence at North Penn,"Oklahoma City, Oklahoma","14520 N Pennsylvania Ave, Oklahoma City, OK 73134, USA",35.6177475,-97.5467832
+13,North Creek Apartments,"Southaven, Mississippi","8786 N Creek Blvd, Southaven, MS 38671, USA",34.986608,-90.066518
+14,Ender’s Place at Baldwin Park,"Orlando, Florida",error,error,error
+15,Art Avenue,"Orlando, Florida","10201 Lee Vista Blvd, Orlando, FL 32829, USA",28.4796619,-81.2457096
+16,Reserve at Port St Lucie,"Port St Lucie, Florida","1500 SE Tiffany Club Pl, Port St Lucie, FL 34952, USA",27.2914951,-80.2877309
+17,Cypress Club at Woodmont,"Tamarac, Florida",error,error,error
+18,West Isle Club,"Key West, Florida","3333 Duck Ave # A101, Key West, FL 33040, USA",24.564423,-81.761776
+19,Falcon Trace,"Orlando, Florida","1635 Peregrine Falcons Way, Orlando, FL 32837, USA",28.362234,-81.400939
+20,Reserve at Ormond,"Ormond Beach, Florida","600 Crowne Commerce Ct, Ormond Beach, FL 32174, USA",29.247097,-81.107114
+21,The Point at Tamaya,"Jacksonville, Florida","3050 Tamaya Boulevard, Jacksonville, FL 32246, USA",30.29375899999999,-81.486137
+22,Arrow Ridge,"Orlando, Florida","4100 Arrow Ridge Pl, Kissimmee, FL 34741, USA",28.314641,-81.447883
+23,Toledo Club,"North Port, Florida","3695 Island Club Dr, North Port, FL 34288, USA",27.0481437,-82.1602724
+24,Courtyards at Estero,"Estero, Florida","10445 Corkscrew Commons Dr, Estero, FL 33928, USA",26.4325781,-81.7813841
+25,Point at Naples,"Naples, Florida","2155 Great Blue Dr, Naples, FL 34112, USA",26.132578,-81.76592600000001
+26,Aqua Park,"Tallahassee, Florida","2677 Old Bainbridge Rd, Tallahassee, FL 32303, USA",30.483532,-84.318717
+27,Arbor Lakes,"Tampa, FL","6161 Memorial Hwy, Tampa, FL 33615, USA",27.990368,-82.5730184
+28,The Point at Bella Grove,"Sarasota, FL","3415 Broadway Ave, Sarasota, FL 34243, USA",27.392733,-82.52053699999999
+29,Garden District,"Simpsonville, South Carolina","Garden District Dr, Simpsonville, SC 29681, USA",34.7287414,-82.2596001
+30,Bridges at Pelham,"Greenville, South Carolina","151 Mitchell Rd, Greenville, SC 29615, USA",34.870836,-82.31976399999999
+31,Otarre,"Columbia, South Carolina","1137 Fort Congaree Trail, Cayce, SC 29033, USA",33.9352603,-81.03862769999999
+32,The Preserve at Woods Lake,"Greenville, South Carolina","412 Woods Lake Rd, Greenville, SC 29607, USA",34.85316,-82.341398
+33,Waterlynn Ridge,"Mooresville, North Carolina","123 Waterlynn Ridge Rd, Mooresville, NC 28117, USA",35.5633194,-80.84716
+34,Cameron at Hickory Grove,"Charlotte, North Carolina","5625 Keyway Blvd, Charlotte, NC 28215, USA",35.226044,-80.726573
+35,Carriage Club,"Mooresville, North Carolina","Carriage Club Dr, Mooresville, NC 28117, USA",35.6002793,-80.8671552
+36,Barrington,"Charlotte, North Carolina","Barrington Dr, Charlotte, NC 28215, USA",35.2482202,-80.7456919
+37,Chapel View,"Chapel Hill, North Carolina","2701 Homestead Rd, Chapel Hill, NC 27516, USA",35.9495783,-79.05983239999999
+38,Chapel Ridge,"Chapel Hill, North Carolina","101 Legacy Terrace, Chapel Hill, NC 27516, USA",35.94731,-79.0615097
+39,Treybrooke Apartments,"Raleigh, North Carolina","201 Treybrooke Dr, Morrisville, NC 27560, USA",35.8323093,-78.8366478
+40,First Street Place,"Greenville, North Carolina","400 W 1st St, Greenville, NC 27834, USA",35.6163835,-77.3752154
+41,Spring Place,"Greensboro, North Carolina","3610 Clifton Rd, Greensboro, NC 27407, USA",36.0588955,-79.85190209999999
+42,Preserve at the Park,"Durham, North Carolina","5639 Old Chapel Hill Rd, Durham, NC 27707, USA",35.9430893,-79.0021093
+43,Reserve at StoneHollow,"Charlotte, North Carolina","8800 Hollow Creek Cir, Charlotte, NC 28262, USA",35.37165,-80.736476
+44,The Point at Westside,"Atlanta, Georgia","370 Northside Dr NW, Atlanta, GA 30318, USA",33.765192,-84.4049802
+45,Village on the Green Apartments,"Atlanta, Georgia","2975 Continental Colony Pkwy SW, Atlanta, GA 30331, USA",33.6847158,-84.49496309999999
+46,The Lodge at Athens,"Athens, Georgia","211 North Ave, Athens, GA 30601, USA",33.971286,-83.36988199999999
+47,Estates at Perimeter,"Augusta, Georgia","50 St. Andrews Dr., Augusta, GA 30909, United States",33.490051,-82.086333
+48,Village at Rice Hope,"Port Wentworth, Georgia","203 Magnolia Blvd, Port Wentworth, GA 31407, USA",32.2104999,-81.19902479999999
+49,Hamptons at East Cobb,"Marietta, Georgia","1523 Roswell Rd, Marietta, GA 30062, USA",33.953323,-84.50872919999999
+50,"Village at Rice Hope, Phase II","Port Wentworth, Georgia",error,error,error
+51,Amber Mill,"Duluth, Georgia","2906 Old Norcross Rd, Duluth, GA 30096, USA",33.9509619,-84.1001768
+52,Marina Shores,"Virginia Beach, Virginia","Marina Shores Dr, Virginia Beach, VA 23451, USA",36.90615409999999,-76.06627259999999
+53,Apex on Preston,"Louisville, Kentucky","11602 Apex View Dr, Louisville, KY 40229, USA",38.0936188,-85.6726932
+54,851 W Grand,"Chicago, Illinois","851 W Grand Ave, Chicago, IL 60642, USA",41.8909051,-87.649706
+55,Shallowford Trace,"Chattanooga, Tennessee","7510 Shallowford Rd, Chattanooga, TN 37421, USA",35.0371567,-85.1432136
+56,Apex on Preston,"Knoxville, Tennessee","11602 Apex View Dr, Louisville, KY 40229, USA",38.0936188,-85.6726932
+57,Bridgeway,"Knoxville, Tennessee","Bridgeway Dr, Maryville, TN 37801, USA",35.7506726,-84.0079853
+58,Point at Waterford Crossing,"Hendersonville, Tennessee","100 Spade Leaf Blvd, Hendersonville, TN 37075, USA",36.2957509,-86.6145689
+59,Mountain Brook,"Chattanooga, Tennessee","Mountain Creek Rd, Chattanooga, TN, USA",35.131286,-85.3087999
+60,Bridgeway Chattanooga,"Chattanooga, Tennessee",error,error,error
+61,Cordova Creek,"Memphis, Tennessee","7965 Humphreys Hill Dr, Hunters Hollow South, TN 38016, USA",35.1573031,-89.79751189999999
+62,Moderne at Providence,"Huntsville, AL","30 Gates Mill St. NW, Huntsville, AL 35806, United States",34.753527,-86.693803
+63,The Point at Oak Mountain,"Birmingham, AL","1 Stonecrest Dr, Birmingham, AL 35242, USA",33.40711,-86.66008
+64,The Point at Fairview,"Prattville, AL","669 Covered Bridge Pkwy, Prattville, AL 36066, USA",32.480822,-86.41385939999999

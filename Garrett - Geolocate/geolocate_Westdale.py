@@ -19,7 +19,7 @@ for i in range(1,8):
 
 labels = ['Name', 'Full Address', 'Lat', 'Lng']
 results = pd.DataFrame.from_records(results, columns=labels)
-results.to_csv('output3.csv')
+results.to_csv('westdalecommunities.csv')
 
 
 
