@@ -52,9 +52,9 @@ def count_nearby(row, str_data,distance):
     return len(within_range)
 
 def get_nearby_rentals(apart,bnb,hmawy):
-    for distance in [3,1,0.2]:
+    for distance in [3,1,0.3,0.1]:
         apart['bnb_within_{}_miles'.format(distance)] = apart.apply(count_nearby, axis = 1, args = (bnb,distance))
-    for distance in [3,1,0.2]:
+    for distance in [3,1,0.3,0.1]:
         apart['hmawy_within_{}_miles'.format(distance)] = apart.apply(count_nearby, axis = 1, args = (hmawy,distance))
     return apart
 
