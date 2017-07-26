@@ -2,6 +2,7 @@ import json
 import requests
 import sys
 import pandas as pd
+import time
 
 def getRequest(address):
 	'''Returns the google api request for an address string.'''
@@ -99,7 +100,7 @@ if __name__ == '__main__':
 	
 	# Open the file and locate the address column
 	address = None
-	if 'address' not in list(input_df) or 'Address' not in list(input_df) or 'adr' not in list(input_df):
+	if 'address' not in list(input_df) and 'Address' not in list(input_df) and 'adr' not in list(input_df):
 		print('Please have at least one column labeled address')
 	
 	elif 'address' in list(input_df):
@@ -112,12 +113,13 @@ if __name__ == '__main__':
 		
 	# Output results
 	results = []
-	for row in input_df.iterrows():
-		results.append(getLocation(input_df[address]))
+	for address in input_df[address]:
+		time.sleep(.5)
+		results.append(getLocation(address))
 	
 	labels = ['Address', 'Latitude', 'Longitude', 'Error?']
-	results = pd.Dataframe.from_records(results, columns=labels)
-	results.to_csv(input_file[:-4] + 'OUTPUT.csv')
+	results = pd.DataFrame.from_records(results, columns=labels)
+	results.to_csv(input_file[:-4] + '_OUTPUT.csv')
 
 # Due to biasing, '580 Market Street' and '580 Market St' return different results
 # This can be rectified by biassing towards a boundary or a region
