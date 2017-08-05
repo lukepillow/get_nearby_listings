@@ -72,18 +72,19 @@ except:
 
 print input_df.head()
 
-
+# Need a column names 'url' it doesn't have to be actually url
 if 'url' not in list(input_df):
     print("Need to have at least one column named 'url'")
 
+# If no lat,lon column, means we use apartment url data 
 elif 'lat' not in list(input_df):
     urls = list(input_df['url'])
     apart_all = pd.read_csv(PATH + 'apart_all.csv')
     apart_match = apart_all[apart_all['url'].isin(urls)]
     print("For total {} URLs in {}, we found {} matches ".format(len(urls),sys.argv[1],len(apart_match)))
-    input_df = apart_match[['url','lat','lon']]
     missing_urls = input_df[~input_df['url'].isin(list(apart_match['url']))]
     print missing_urls
+    input_df = apart_match[['url','lat','lon']]
 
 if 'lat' in list(input_df) and 'lon' in list(input_df):
     print("Load bnb data")
@@ -98,7 +99,7 @@ if 'lat' in list(input_df) and 'lon' in list(input_df):
     apart_counts.to_csv(PATH + 'data_output/{}_nearby_STR.csv'.format(file_name),index = False)
 
     print("Get nearest Homeaway listings")
-
+    
     hmawy_detail = pd.DataFrame(get_listings_detail(input_df,hmawy_US),columns = ['Apart','hmawy','hmaway_distance'] )
     print("finished hmawy")
     hmawy_detail.to_csv(PATH + 'data_output/{}_hmawy_detail.csv'.format(file_name),index = False)
