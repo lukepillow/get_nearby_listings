@@ -1,0 +1,12 @@
+id,name,address_line_1,address_line_2,city,state,postal_code,latitude,longitude
+1,Westlake,1560 Jackson St.,,Oakland,CA,94612,37.8041061,-122.2634885
+3,Park La Brea,6200 W 3rd St,,Los Angeles,CA,90036,34.0701777,-118.3550137
+4,Broadway Place,250 W Broadway,,Eugene,OR,97401,44.049756,-123.0963206
+5,Archer Tower,901 Sherman St,,Denver,CO,80203,39.7308383,-104.9854251
+6,Broadway Place,251 W Broadway,,Eugene,OR,97401,44.0500693,-123.0965634
+11,Altitude,135 S 500 W,,Salt Lake City,UT,84101,40.7660955,-111.9045936
+12,Via Vista,532 Cancun Loop NE,,Rio Rancho,NM,87124,35.2661287,-106.6985668
+13,Avaria Of Santa Fe,1896 Lorca Dr.,,Santa Fe,NM,87505,35.6567355,-105.9612963
+14,Los Pinones Apartments,825 Calle Mejia,,Santa Fe,NM,87501,35.703415,-105.951184
+15,The Fairways,777 West Chandler Blvd,,Chandler,AZ,85225,33.3057556,-111.8542947
+16,Rock Ridge,5205 Cortland Blvd,,Flagstaff,AZ,86004,35.2116911,-111.5758675
