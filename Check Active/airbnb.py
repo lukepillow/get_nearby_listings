@@ -42,6 +42,28 @@ def checkActive(id):
 		else:
 			return False
 
+def checkActiveUrl(url):
+	'''Takes an airbnb url and returns True if still active.'''
+	req = getUrlRequest(url)
+	with urllib.request.urlopen(req) as airbnbPage:
+		if airbnbPage.url == url:
+			return True
+		elif airbnbPage.url == url[:-2]: # Hard check addition for .0 urls...
+			return True
+		else:
+			return False
+
+			
+# NOT YET DONE
+def checkActiveUrl2(url):
+	'''Takes an airbnb url and returns True if still active.'''
+	req = requests.get(url, headers=headers)
+	#if(req.statusCode
+	if airbnbPage.url == url:
+		return True
+	else:
+		return False
+
 def getAvailability(id):
 	'''Returns a set containing the parsed json data for the dates of the next 3 months.'''
 	# This uses a set to avoid overlap from the airbnb api between months

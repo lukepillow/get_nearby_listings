@@ -3,10 +3,13 @@ import pandas as pd
 import csv
 import airbnb
 import ast
+import datetime
 
 from geopy.distance import vincenty
 from geopy.distance import great_circle
 
+# Date to keep track of previous runs
+today = datetime.datetime.today().strftime("%Y_%m_%d")
 
 def login_to_database():
 	'''Wrapper for connect_postgresql() that uses credentials stored in "credentials.py"'''
@@ -45,6 +48,7 @@ def get_range(lat,lon,miles = 1):
 	q = ('lat < {} AND lat > {} AND lng < {} AND lng > {}'.format(lat+lat_range,lat-lat_range,lon+lon_range,lon-lon_range))
 	return q		
 
+#untested
 def getBuildings(conn):
 	'''Gets all of the buildings data from the database and returns it in a pandas DataFrame.'''
 	registered_buildings_query = '''SELECT c.id,c.name,pa.address_line_1, address_line_2, city, state, postal_code,latitude,longitude 
@@ -108,6 +112,7 @@ def processBuilding(building, conn):
 	return results
 
 
+#untested
 def getUsers(conn):
 	registered_users_query = '''SELECT resident_units.id,listings.service_property_id,buildings.community_id,buildings.name,postal_addresses.latitude,postal_addresses.longitude FROM resident_units
 	INNER JOIN listings ON listings.resident_unit_id = resident_units.id
@@ -134,6 +139,22 @@ def getAvailability(id):
 	return int(count)
 
 
+#untested
+def makeTable(conn, cur):
+	# TO-DO: Check if it exists
+	table_query = '''CREATE TABLE garrett_policing_data (
+	building TEXT,
+	address TEXT,
+	id INTEGER,
+	name TEXT,
+	distance FLOAT8,
+	availabililty INTEGER,
+	url TEXT);
+	'''
+	cur.execute(table_query)
+	#conn.commit()
+	
+
 def process(buildingsDF, registeredDF, conn):
 	'''Function to process all the buildings and output the data to "Output.csv"'''
 	results = []
@@ -148,13 +169,17 @@ def process(buildingsDF, registeredDF, conn):
 			results[i].append(True)
 		else:
 			results[i].append(False)
+		
+		#Append the current date for future records
+		results[i].append(today)
 	
-	labels = ['Building','Address','ID', 'Match?', 'Name', 'Distance', 'TotalAvailability', 'URL', 'Active?', 'In System?']
+	labels = ['Building','Address','ID', 'Match?', 'Name', 'Distance', 'TotalAvailability', 'URL', 'Active?', 'In System?', 'Date Found']
 	resultsDF = pd.DataFrame.from_records(results, columns = labels)
 	with open('Output.csv', 'w', errors='replace') as f:
 		resultsDF.to_csv(f, encoding='utf-8')
 
 def go():
-	conn, cur = connect_postgresql()
+	conn, cur = login_to_database()
 	buildingsDF, registeredDF = temp()
 	process(buildingsDF, registeredDF, conn)
+	
