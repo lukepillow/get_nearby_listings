@@ -33,3 +33,19 @@ def isAirbnb(url):
 
 def isHomeaway(url):
 	return 'homeaway.com' in url
+
+
+if __name__ == '__main__':
+	# Get the file to open from the arguments
+	input_file = sys.argv[1]
+	column_name = sys.argv[2]
+	
+	if '.csv' not in input_file:
+		print('Please use a csv file.')
+	try:
+		input_list = load_csv(input_file, column_name)
+	except:
+		print('Error in opening file.')
+	
+	results = checkListings(input_list)
+	writeOutput(results)
