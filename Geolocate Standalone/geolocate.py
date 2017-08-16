@@ -125,4 +125,5 @@ if __name__ == '__main__':
 # This can be rectified by biassing towards a boundary or a region
 # However, when more exact, such as '580 Market Street, San Fran', then it doesn't matter'
 # Google api gives 2500 free requests per day at 50 per second
+# Is this github mergable?
 
