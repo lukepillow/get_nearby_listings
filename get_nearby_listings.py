@@ -20,7 +20,8 @@ from geopy.distance import vincenty
 
 today = dt.datetime.today().strftime("%Y_%m_%d")
 PATH = "~/work/"
-
+INPUT_PATH = "~/work/input/"
+OUTPUT_PATH = "~/work/output/"
 
 def get_range(lat,lon,miles = 1):
     lat_range = 0.012*miles
@@ -59,54 +60,58 @@ def get_nearby_rentals(apart,bnb,hmawy):
     return apart
 
 
-print 'Number of arguments:', len(sys.argv), 'arguments.'
-input_file = sys.argv[1]
-file_name = input_file.split('/')[-1].replace('.csv','')
+# print('Number of arguments:', len(sys.argv), 'arguments.')
+# input_file = sys.argv[1]
+# file_name = input_file.split('/')[-1].replace('.csv','')
 
-if ".csv" not in input_file:
-    print("Please use csv file")
-try:
-    input_df = pd.read_csv(input_file)
-except:
-    print("error in load data")
+# if ".csv" not in input_file:
+#     print("Please use csv file")
+# try:
+#     input_df = pd.read_csv(input_file)
+# except:
+#     print("error in load data")
 
-print input_df.head()
+# print(input_df.head())
 
-# Need a column names 'url' it doesn't have to be actually url
-if 'url' not in list(input_df):
-    print("Need to have at least one column named 'url'")
+# # Need a column names 'url' it doesn't have to be actually url
+# if 'url' not in list(input_df):
+#     print("Need to have at least one column named 'url'")
 
-# If no lat,lon column, means we use apartment url data 
-elif 'lat' not in list(input_df):
-    urls = list(input_df['url'])
-    apart_all = pd.read_csv(PATH + 'apart_all.csv')
-    apart_match = apart_all[apart_all['url'].isin(urls)]
-    print("For total {} URLs in {}, we found {} matches ".format(len(urls),sys.argv[1],len(apart_match)))
-    missing_urls = input_df[~input_df['url'].isin(list(apart_match['url']))]
-    print missing_urls
-    input_df = apart_match[['url','lat','lon']]
+# # If no lat,lon column, means we use apartment url data 
+# elif 'lat' not in list(input_df):
+#     urls = list(input_df['url'])
+#     apart_all = pd.read_csv(INPUT_PATH + 'apt_all.csv')
+#     apart_match = apart_all[apart_all['url'].isin(urls)]
+#     print("For total {} URLs in {}, we found {} matches ".format(len(urls),sys.argv[1],len(apart_match)))
+#     missing_urls = input_df[~input_df['url'].isin(list(apart_match['url']))]
+#     print(missing_urls)
+#     input_df = apart_match[['url','lat','lon']]
+
+
+input_df = pd.read_csv(INPUT_PATH + 'apt_url_lat_lon.csv')
+file_name = 'all_apt'
 
 if 'lat' in list(input_df) and 'lon' in list(input_df):
     print("Load bnb data")
-    bnb_US = pd.read_csv(PATH + 'bnb_US_selected_features1.csv')
+    bnb_US = pd.read_csv(INPUT_PATH + 'bnb_id_lat_lon_US.csv')
 
     print("Load hmawy data")
-    hmawy_US = pd.read_csv(PATH + 'data/all_hmawy_2017-03-09_1.csv')
+    hmawy_US = pd.read_csv(INPUT_PATH + 'hmawy_url_lat_lng.csv')
 
 
     print("counting nearyby STRs")
     apart_counts = get_nearby_rentals(input_df,bnb_US,hmawy_US)
-    apart_counts.to_csv(PATH + 'data_output/{}_nearby_STR.csv'.format(file_name),index = False)
+    apart_counts.to_csv(OUTPUT_PATH + '{}_nearby_STR.csv'.format(file_name),index = False)
 
-    print("Get nearest Homeaway listings")
+    # print("Get nearest Homeaway listings")
     
-    hmawy_detail = pd.DataFrame(get_listings_detail(input_df,hmawy_US),columns = ['Apart','hmawy','hmaway_distance'] )
-    print("finished hmawy")
-    hmawy_detail.to_csv(PATH + 'data_output/{}_hmawy_detail.csv'.format(file_name),index = False)
+    # hmawy_detail = pd.DataFrame(get_listings_detail(input_df,hmawy_US),columns = ['Apart','hmawy','hmaway_distance'] )
+    # print("finished hmawy")
+    # hmawy_detail.to_csv(OUTPUT_PATH + '{}_hmawy_detail.csv'.format(file_name),index = False)
 
-    print("Get nearest Airbnb listings")
-    bnb_detail = pd.DataFrame(get_listings_detail(input_df,bnb_US),columns = ['Apart','bnb','bnb_distance'])
-    bnb_detail.to_csv(PATH + 'data_output/{}_bnb_detail.csv'.format(file_name),index = False)
+    # print("Get nearest Airbnb listings")
+    # bnb_detail = pd.DataFrame(get_listings_detail(input_df,bnb_US),columns = ['Apart','bnb','bnb_distance'])
+    bnb_detail.to_csv(OUTPUT_PATH + '{}_bnb_detail.csv'.format(file_name),index = False)
 
     print("finished all")
 
